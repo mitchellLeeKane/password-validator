@@ -19,6 +19,9 @@ public class Validator {
         int passed = 0;
         if (isPassword(password)) passed++;
         if (greater7(password)) passed++;
+        if (hasCap(password)) passed++;
+        if (hasNum(password)) passed++;
+        if (hasSpecial(password)) passed++;
         return passed;
     }
 
@@ -32,4 +35,19 @@ public class Validator {
         return password.length()>7;
     }
 
+    // Checks that the password has upper and lower case
+    boolean hasCap (String password) {
+        return !password.toLowerCase().equals(password)
+            && !password.toUpperCase().equals(password);
+    }
+
+    // Checks that the password contains at least one number
+    boolean hasNum (String password) {
+        return password.matches(".*\\d+.*");
+    }
+
+    // Checks that the password has at least one special character
+    boolean hasSpecial (String password) {
+        return password.matches(".*[^A-Za-z0-9]+.*");
+    }
 }
