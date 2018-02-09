@@ -42,7 +42,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="none"
-        android:text="Enter Password Here"
+        android:hint="Enter Password Here"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
